@@ -1,4 +1,4 @@
-export const studentData = [
+export const evaluationData = [
 	{
 		name: "Evelyn",
 		assignment: "SCRUM",
