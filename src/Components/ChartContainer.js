@@ -1,4 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
+
+import BarChart from "./BarChart";
 
 function ChartContainer() {
     const evaluations = useSelector(state => state.students.evaluations);
@@ -21,9 +23,25 @@ function ChartContainer() {
             ratings
         }
     });
+
+    //Creates arrays with the data to be used in graphs.
+    const labelArray = averageRatingArray.map((assignment) => {
+        return assignment.assignment
+    });
+
+    const difficultyArray = averageRatingArray.map((assignment) => {
+        return assignment.difficulty
+    });
+
+    const enjoymentArray = averageRatingArray.map((assignment) => {
+        return assignment.enjoyment
+    }); 
+    
     
     return (
-        <h2>Hello</h2>
+        <div>
+            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
+        </div>
     )
 }
 
