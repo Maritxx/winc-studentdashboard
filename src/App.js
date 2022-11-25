@@ -1,9 +1,10 @@
+import ChartContainer from './Components/ChartContainer';
 import './App.css';
 
 function App() {
     return (
         <div>
-            <h1>Hello world!</h1>
+            <ChartContainer />
         </div>
     );
 }
