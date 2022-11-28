@@ -27,13 +27,13 @@ function BarChart(props) {
             text: "Average Rating of Students",
             align: "center",
             style: {
-                fontSize: "12px"
+                fontSize: "20px"
             }
         },
         legend: {
             position: "top",
-            fontSize: "8px",
-            fontWeight: 700
+            fontSize: "12px",
+            fontWeight: 700,
         },
         plotOptions: {
             bar: {
@@ -47,9 +47,8 @@ function BarChart(props) {
         dataLabels: {
             enabled: true,
             offsetX: -5,
-            offsetY: 1,
             style: {
-                fontSize: "7px"
+                fontSize: "12px"
             }
         },
         textAnchor: "middle",
@@ -62,7 +61,7 @@ function BarChart(props) {
             categories: props.labels,
             labels: {
                 style: {
-                    fontSize: "8px"
+                    fontSize: "12px"
                 }
             }
         },
@@ -70,10 +69,10 @@ function BarChart(props) {
             min: 0,
             max: 5,
             labels: {
-                maxWidth: 50,
+                maxWidth: 70,
                 align: "left",
                 style: {
-                    fontSize: "8px"
+                    fontSize: "12px"
                 }
             },
         },
@@ -83,7 +82,7 @@ function BarChart(props) {
 
 
     return (
-        <div style={{minHeight: "1600px", maxWidth: "750px"}}>
+        <div style={{minHeight: "2000px", maxWidth: "1200px"}}>
             <Chart options={options} series={series} type="bar" height="100%" width="100%" />
         </div>
     )
