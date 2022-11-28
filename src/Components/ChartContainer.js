@@ -42,7 +42,7 @@ function ChartContainer() {
     return (
         <div>
             <StudentFilter />
-            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
+            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={"Average Ratings of Students"} />
         </div>
     )
 }

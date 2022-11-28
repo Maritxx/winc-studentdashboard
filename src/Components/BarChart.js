@@ -24,7 +24,7 @@ function BarChart(props) {
             palette: "palette6"
         },
         title: {
-            text: "Average Rating of Students",
+            text: props.title,
             align: "center",
             style: {
                 fontSize: "20px"
