@@ -1,6 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import BarChart from "./BarChart";
+import StudentFilter from './StudentFilter';
 
 function ChartContainer() {
     const evaluations = useSelector(state => state.students.evaluations);
@@ -40,6 +41,7 @@ function ChartContainer() {
     
     return (
         <div>
+            <StudentFilter />
             <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
         </div>
     )
