@@ -1,5 +1,6 @@
 import Chart from 'react-apexcharts';
 
+
 function BarChart(props) {
     const series = [
         {
@@ -22,13 +23,30 @@ function BarChart(props) {
         theme: {
             palette: "palette6"
         },
+        title: {
+            text: "Average Rating of Students",
+            align: "center"
+        },
         plotOptions: {
             bar: {
                 horizontal: true,
+                barHeight: "80%",
                 dataLabels: {
-                    position: "top"
+                    position: "top",
                 }
             }
+        },
+        dataLabels: {
+            enabled: true,
+            offsetX: -5,
+            style: {
+                fontSize: "10px"
+            }
+        },
+        stroke: {
+            show: true,
+            width: 1,
+            colors: ['#FFFFFF']
         },
         xaxis: {
             categories: props.labels
@@ -36,14 +54,20 @@ function BarChart(props) {
         yaxis: {
             min: 0,
             max: 5,
-            tickAmount: 5
-        }
+            tickAmount: 10,
+            labels: {
+                maxWidth: 60
+            }
+        },
+       
     };
 
 
 
     return (
-        <Chart options={options} series={series} type="bar" height="100%" width="50%" />
+        <div style={{minHeight: "2000px"}}>
+            <Chart options={options} series={series} type="bar" height="100%" width="100%" />
+        </div>
     )
 }
 
