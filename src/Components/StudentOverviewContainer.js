@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import BarChart from './BarChart';
+import LineChart from './LineChart';
 
 function StudentOverviewContainer() {
     const { studentName } = useParams();
@@ -26,13 +27,16 @@ function StudentOverviewContainer() {
     }); 
 
 
-    
+
     return (
         <div>
-            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={`Ratings per assignment from ${studentName}`} />
+            <Link to="/">
+                <button>Go back</button>
+            </Link>
+            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={`Ratings of ${studentName}`} />
+            <LineChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
         </div>
     )
 }
 
 export default StudentOverviewContainer;
-//Create a back-button that will return to the homepage.
