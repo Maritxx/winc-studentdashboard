@@ -44,7 +44,7 @@ function ChartContainer() {
         <div>
             <StudentFilter />
             <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={"Average Ratings of Students"} />
-            <LineChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={"Average Ratings given"}/>
+            <LineChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
         </div>
     )
 }

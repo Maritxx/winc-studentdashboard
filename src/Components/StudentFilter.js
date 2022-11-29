@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import './StudentFilter.css';
+
 function StudentFilter() {
     const evaluations = useSelector(state => state.students.evaluations);
     
@@ -17,7 +19,7 @@ function StudentFilter() {
 
     
     return (
-        <div>
+        <div className="filter__container">
             <h2>Student Filter</h2>
             <nav>
                 {filteredStudentNames.map((student) => {
