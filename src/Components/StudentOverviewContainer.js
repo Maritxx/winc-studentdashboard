@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import './StudentOverviewContainer.css';
+
 import BarChart from './BarChart';
 import LineChart from './LineChart';
 
@@ -34,16 +36,18 @@ function StudentOverviewContainer() {
     
 
     return (
-        <div>
-            <Link to="/">
-                <button>Go back</button>
-            </Link>
+        <div className="student-overview__holder">
             <div className="student-info__container">
-                <img src={filteredStudent.avatar} alt={filteredStudent.first_name} />
+                <div>
+                    <img src={filteredStudent.avatar} alt={filteredStudent.first_name} />
+                    <Link to="/">
+                        <button>Go back</button>
+                    </Link>
+                </div>
                 <ul>
-                    <li>Full name: {filteredStudent.first_name} {filteredStudent.last_name}</li>
-                    <li>Age: {filteredStudent.age}</li>
-                    <li>Email: {filteredStudent.email}</li>
+                    <li><span>Full name:</span> {filteredStudent.first_name} {filteredStudent.last_name}</li>
+                    <li><span>Age:</span> {filteredStudent.age}</li>
+                    <li><span>Email:</span> {filteredStudent.email}</li>
                 </ul>
             </div>
             <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={`Ratings of ${studentName}`} />

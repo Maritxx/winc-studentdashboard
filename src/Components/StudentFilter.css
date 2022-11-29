@@ -1,11 +1,11 @@
 .filter__container {
-    padding: 15px;
     border-bottom: 2px solid #373d3f;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -21,7 +21,14 @@ a:hover {
 }
 
 h2 {
-    margin: 5px 0px;
+    margin: 0;
     text-align: center;
     color: #373d3f;
+}
+
+p {
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+    color: #373d3f;
+    font-style: italic;
 }

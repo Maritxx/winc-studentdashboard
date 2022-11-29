@@ -2,5 +2,7 @@
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    padding: 15px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }

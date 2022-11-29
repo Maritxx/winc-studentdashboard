@@ -82,7 +82,7 @@ function BarChart(props) {
 
 
     return (
-        <div style={{minHeight: "2000px", maxWidth: "1200px"}}>
+        <div style={{minHeight: "2000px"}}>
             <Chart options={options} series={series} type="bar" height="100%" width="100%" />
         </div>
     )

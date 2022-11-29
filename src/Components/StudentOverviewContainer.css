@@ -1,0 +1,49 @@
+.student-overview__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.student-overview__holder > div {
+    flex: 0 1 100%;
+    max-width: calc(100% - 30px);
+    width: 100%;
+    padding: 15px;
+}
+
+.student-info__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-info__container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: inherit;
+    background-color: #373d3f;
+    border: 2px solid #515758;
+    border-radius: 25px;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #60acd8;
+    border: 2px solid #63b5e4;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+ul span {
+    font-weight: 500;
+}

@@ -51,7 +51,7 @@ function LineChart(props) {
     };
 
     return (
-        <div style={{minHeight: "700px", maxWidth: "1200px"}}>
+        <div style={{minHeight: "700px"}}>
             <Chart options={options} series={series} type="line" width="100%" height="100%" />
         </div>
     )

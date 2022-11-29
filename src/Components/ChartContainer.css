@@ -1,0 +1,13 @@
+.chart__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.chart__container > div {
+    flex: 0 1 100%;
+    max-width: calc(100% - 30px);
+    width: 100%;
+    padding: 15px;
+}

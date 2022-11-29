@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import './ChartContainer.css';
+
 import BarChart from "./BarChart";
 import LineChart from './LineChart';
 import StudentFilter from './StudentFilter';
@@ -41,9 +43,9 @@ function ChartContainer() {
     
     
     return (
-        <div>
+        <div className="chart__container">
             <StudentFilter />
-            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={"Average Ratings of Students"} />
+            <BarChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} title={"Average Ratings"} />
             <LineChart labels={labelArray} difficultyData={difficultyArray} enjoymentData={enjoymentArray} />
         </div>
     )

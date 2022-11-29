@@ -21,6 +21,7 @@ function StudentFilter() {
     return (
         <div className="filter__container">
             <h2>Student Filter</h2>
+            <p>Click on a student to see an overview of that student and their evaluations</p>
             <nav>
                 {filteredStudentNames.map((student) => {
                     return (
